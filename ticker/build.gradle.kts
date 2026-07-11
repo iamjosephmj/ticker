@@ -1,9 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
-    `maven-publish`
+    alias(libs.plugins.maven.publish.vanniktech)
 }
 
-group = "tech.ssemaj"
 version = findProperty("VERSION_NAME")?.toString() ?: "1.0.0"
 
 android {
@@ -41,34 +40,38 @@ android {
         }
     }
 
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
+}
+
+mavenPublishing {
+    publishToMavenCentral(automaticRelease = true)
+    signAllPublications()
+    coordinates("tech.thessemaj", "ticker", version.toString())
+    pom {
+        name = "ticker"
+        description = "Kernel-aligned wall-clock ticks for Android. Zero threads. One function."
+        url = "https://github.com/iamjosephmj/ticker"
+        licenses {
+            license {
+                name = "The Apache License, Version 2.0"
+                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        }
+        developers {
+            developer {
+                id = "iamjosephmj"
+                name = "Joseph MJ"
+                url = "https://github.com/iamjosephmj"
+            }
+        }
+        scm {
+            url = "https://github.com/iamjosephmj/ticker"
+            connection = "scm:git:git://github.com/iamjosephmj/ticker.git"
+            developerConnection = "scm:git:ssh://git@github.com/iamjosephmj/ticker.git"
         }
     }
 }
 
 publishing {
-    publications {
-        register<MavenPublication>("release") {
-            artifactId = "ticker"
-            afterEvaluate { from(components["release"]) }
-            pom {
-                name = "ticker"
-                description = "Kernel-aligned wall-clock ticks for Android. Zero threads. One function."
-                url = "https://github.com/iamjosephmj/ticker"
-                developers {
-                    developer {
-                        id = "iamjosephmj"
-                        name = "Joseph MJ"
-                    }
-                }
-                scm {
-                    url = "https://github.com/iamjosephmj/ticker"
-                }
-            }
-        }
-    }
     repositories {
         maven {
             name = "GitHubPackages"

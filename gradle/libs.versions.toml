@@ -36,4 +36,5 @@ desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", ver
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+maven-publish-vanniktech = { id = "com.vanniktech.maven.publish", version = "0.34.0" }
 

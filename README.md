@@ -90,33 +90,18 @@ pump — exposed here as a one-line ticker API. Same maze, secret warp tunnel.
 
 ## 🪙 INSERT COIN — install
 
-From [GitHub Packages](https://github.com/iamjosephmj/ticker/packages) (needs a
-GitHub token with `read:packages` — GitHub requires auth even for public
-packages):
+From Maven Central:
 
 ```kotlin
-// settings.gradle.kts
-dependencyResolutionManagement {
-    repositories {
-        maven {
-            url = uri("https://maven.pkg.github.com/iamjosephmj/ticker")
-            credentials {
-                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR")
-                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-}
-
-// build.gradle.kts
 dependencies {
-    implementation("tech.ssemaj:ticker:1.0.0")
+    implementation("tech.thessemaj:ticker:1.0.0")
 }
 ```
 
-Or grab `ticker-1.0.0.aar` straight from the
-[release](https://github.com/iamjosephmj/ticker/releases/tag/v1.0.0) — no auth,
-no repository config:
+Also on [GitHub Packages](https://github.com/iamjosephmj/ticker/packages)
+(needs a GitHub token with `read:packages`), or grab `ticker-1.0.0.aar`
+straight from the
+[release](https://github.com/iamjosephmj/ticker/releases/tag/v1.0.0):
 
 ```kotlin
 implementation(files("libs/ticker-1.0.0.aar"))
