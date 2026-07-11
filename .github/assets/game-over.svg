@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150">
+<style>
+.jaw-open{animation:jo .36s linear infinite}
+.jaw-shut{animation:js .36s linear infinite}
+@keyframes jo{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes js{0%,49%{opacity:0}50%,100%{opacity:1}}
+.pchase{animation:pc 6s linear infinite}@keyframes pc{from{transform:translate(30px,106px)}to{transform:translate(880px,106px)}}.fA{animation:fAk 6s linear infinite}@keyframes fAk{from{transform:translate(74px,93px)}to{transform:translate(924px,93px)}}.fB{animation:fBk 6s linear infinite}@keyframes fBk{from{transform:translate(118px,93px)}to{transform:translate(968px,93px)}}.fC{animation:fCk 6s linear infinite}@keyframes fCk{from{transform:translate(162px,93px)}to{transform:translate(1012px,93px)}}.fD{animation:fDk 6s linear infinite}@keyframes fDk{from{transform:translate(206px,93px)}to{transform:translate(1056px,93px)}}.blink{animation:bl 1s steps(1) infinite}@keyframes bl{0%,55%{opacity:1}56%,100%{opacity:0}}</style>
+<rect width="880" height="150" rx="14" fill="#000000"/>
+<rect x="7" y="7" width="866" height="136" rx="10" fill="none" stroke="#2121de" stroke-width="3"/>
+<text x="440.0" y="42" text-anchor="middle" font-family="Courier New,Courier,monospace" font-size="20" font-weight="bold" fill="#ff0000" letter-spacing="5">GAME OVER? NO — TICK FOREVER</text>
+<text class="blink" x="440.0" y="68" text-anchor="middle" font-family="Courier New,Courier,monospace" font-size="13" fill="#ffe600" letter-spacing="3">PRESS ★ (STAR) TO CONTINUE</text>
+<g class="pchase" transform="translate(30,106)"><g class=""><path class="jaw-open" fill="#ffe600" d="M0 0 L11.5 -9.6 A15 15 0 1 0 11.5 9.6 Z"/><path class="jaw-shut" fill="#ffe600" d="M0 0 L14.9 -2.1 A15 15 0 1 0 14.9 2.1 Z"/></g></g>
+<g class="fA" transform="translate(74,93)"><g class="" transform="scale(1.0)"><path fill="#2121de" d="M1 24 L1 12 A12 12 0 0 1 25 12 L25 24 L21 20 L17 24 L13 20 L9 24 L5 20 Z"/><circle cx="9" cy="12" r="3.4" fill="#fff"/><circle cx="17" cy="12" r="3.4" fill="#fff"/><circle cx="9" cy="12" r="1.8" fill="#1a1aff"/><circle cx="17" cy="12" r="1.8" fill="#1a1aff"/></g></g>
+<g class="fB" transform="translate(118,93)"><g class="" transform="scale(1.0)"><path fill="#2121de" d="M1 24 L1 12 A12 12 0 0 1 25 12 L25 24 L21 20 L17 24 L13 20 L9 24 L5 20 Z"/><circle cx="9" cy="12" r="3.4" fill="#fff"/><circle cx="17" cy="12" r="3.4" fill="#fff"/><circle cx="9" cy="12" r="1.8" fill="#1a1aff"/><circle cx="17" cy="12" r="1.8" fill="#1a1aff"/></g></g>
+<g class="fC" transform="translate(162,93)"><g class="" transform="scale(1.0)"><path fill="#2121de" d="M1 24 L1 12 A12 12 0 0 1 25 12 L25 24 L21 20 L17 24 L13 20 L9 24 L5 20 Z"/><circle cx="9" cy="12" r="3.4" fill="#fff"/><circle cx="17" cy="12" r="3.4" fill="#fff"/><circle cx="9" cy="12" r="1.8" fill="#1a1aff"/><circle cx="17" cy="12" r="1.8" fill="#1a1aff"/></g></g>
+<g class="fD" transform="translate(206,93)"><g class="" transform="scale(1.0)"><path fill="#2121de" d="M1 24 L1 12 A12 12 0 0 1 25 12 L25 24 L21 20 L17 24 L13 20 L9 24 L5 20 Z"/><circle cx="9" cy="12" r="3.4" fill="#fff"/><circle cx="17" cy="12" r="3.4" fill="#fff"/><circle cx="9" cy="12" r="1.8" fill="#1a1aff"/><circle cx="17" cy="12" r="1.8" fill="#1a1aff"/></g></g>
+</svg>

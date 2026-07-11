@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Arcade black cabinet. -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M0,0h108v108h-108z" />
+    <!-- Maze-blue ring, inside the adaptive-icon safe zone. -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#2121DE"
+        android:strokeWidth="2.5"
+        android:pathData="M54,54m-30.5,0a30.5,30.5 0 1,1 61,0a30.5,30.5 0 1,1 -61,0" />
+</vector>
