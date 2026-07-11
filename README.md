@@ -88,7 +88,41 @@ pump — exposed here as a one-line ticker API. Same maze, secret warp tunnel.
 | Threads created | 0–1 depending on flavor | **0** |
 | Idle cost when nobody collects | n/a | **zero** — the fd doesn't exist |
 
-## 🪙 INSERT COIN — usage
+## 🪙 INSERT COIN — install
+
+From [GitHub Packages](https://github.com/iamjosephmj/ticker/packages) (needs a
+GitHub token with `read:packages` — GitHub requires auth even for public
+packages):
+
+```kotlin
+// settings.gradle.kts
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/iamjosephmj/ticker")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR")
+                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+// build.gradle.kts
+dependencies {
+    implementation("tech.ssemaj:ticker:1.0.0")
+}
+```
+
+Or grab `ticker-1.0.0.aar` straight from the
+[release](https://github.com/iamjosephmj/ticker/releases/tag/v1.0.0) — no auth,
+no repository config:
+
+```kotlin
+implementation(files("libs/ticker-1.0.0.aar"))
+```
+
+## 🕹️ PLAYER ONE — usage
 
 ```kotlin
 // In a ViewModel — per-tick work runs on IO, timer stays on the main looper:
